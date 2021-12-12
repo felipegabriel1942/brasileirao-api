@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\image-service"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\api-gateway"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\sports-results-config-server\sports-results-config-server"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\eureka-server"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\sports-results-config-server"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\report-service"/>
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\football-service"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
