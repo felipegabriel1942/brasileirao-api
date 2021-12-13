@@ -9333,3 +9333,588 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2021-12-12 13:31:32.570
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-12-12 13:36:23.376 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=1.8.0_311
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY com.sun.xml.bind.jaxb-osgi 4 0 2021-12-12 13:36:24.784
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.sun.xml.bind.jaxb-osgi [812]
+  Unresolved requirement: Import-Package: javax.xml.bind; version="2.3.0"
+    -> Export-Package: javax.xml.bind; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.namespace,javax.xml.stream,javax.xml.transform,javax.xml.validation,org.w3c.dom,org.xml.sax"
+       jaxb-api [815]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=9.0))"
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation; version="2.3.0"
+    -> Export-Package: javax.xml.bind.annotation; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind,javax.xml.parsers,javax.xml.transform,javax.xml.transform.dom,org.w3c.dom"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2021-12-12 13:36:32.709
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2021-12-12 13:36:33.923
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-12 13:36:33.924
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ae07dbd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@e7ddf8d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:42.168
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:42.169
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3e2afba0[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=624)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:42.171
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:42.279
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 13:36:42.564
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\pinhe'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.581
+!MESSAGE Boot LS startup time from start to initialized: 3358ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.617
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WjLSaTVyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.618
+!MESSAGE subscribing to classpath changes: sts4.classpath.WjLSaTVy isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.621
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.624
+!MESSAGE subsribers = {sts4.classpath.WjLSaTVy=Send Classpath Notifications(132)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.624
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.627
+!MESSAGE project football-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.627
+!MESSAGE project api-gateway ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.628
+!MESSAGE Preparing classpath changed notification football-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.628
+!MESSAGE project eureka-server ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.629
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.629
+!MESSAGE project image-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.629
+!MESSAGE project report-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.630
+!MESSAGE project sports-results-config-server ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.630
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.631
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WjLSaTVy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.648
+!MESSAGE classpath=175 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.654
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy football-service false 175
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.654
+!MESSAGE Preparing classpath changed notification api-gateway
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.655
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.669
+!MESSAGE classpath=156 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.674
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy api-gateway false 156
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.674
+!MESSAGE Preparing classpath changed notification eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.675
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.682
+!MESSAGE classpath=148 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.687
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy eureka-server false 148
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.687
+!MESSAGE Preparing classpath changed notification image-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.688
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.697
+!MESSAGE classpath=170 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.702
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy image-service false 170
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.702
+!MESSAGE Preparing classpath changed notification report-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.703
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.710
+!MESSAGE classpath=157 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.716
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy report-service false 157
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.716
+!MESSAGE Preparing classpath changed notification sports-results-config-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.717
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.722
+!MESSAGE classpath=111 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.726
+!MESSAGE buffering callback sts4.classpath.WjLSaTVy sports-results-config-server false 111
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.726
+!MESSAGE executing callback sts4.classpath.WjLSaTVy 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 13:36:45.796
+!MESSAGE executing callback sts4.classpath.WjLSaTVy SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-12-12 17:04:54.796
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 17:04:57.564
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WjLSaTVy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 17:04:57.564
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WjLSaTVy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 17:04:57.565
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 17:04:57.565
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WjLSaTVy => OK
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-12-12 17:05:00.214
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2021-12-12 17:05:00.214
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2021-12-12 17:05:00.214
+!MESSAGE The project description file (.project) for 'sports-results-config-server' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 4 2 2021-12-12 17:05:00.457
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.processBuildResults(MavenBuilderImpl.java:288)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:179)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:173)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1$1.call(MavenBuilder.java:116)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:106)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:87)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2021-12-12 17:05:00.459
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.core.MavenPlugin.getMavenProjectRegistry(MavenPlugin.java:47)
+	at org.sonarlint.eclipse.m2e.internal.M2eUtils.isInNestedModule(M2eUtils.java:51)
+	at org.sonarlint.eclipse.m2e.internal.MavenModuleFilter.exclude(MavenModuleFilter.java:45)
+	at org.sonarlint.eclipse.core.internal.adapter.DefaultSonarLintAdapterFactory.getFileAdapter(DefaultSonarLintAdapterFactory.java:100)
+	at org.sonarlint.eclipse.core.internal.adapter.DefaultSonarLintAdapterFactory.getAdapter(DefaultSonarLintAdapterFactory.java:56)
+	at org.eclipse.core.internal.adapter.AdapterFactoryProxy.getAdapter(AdapterFactoryProxy.java:85)
+	at org.eclipse.core.internal.runtime.AdapterManager.getAdapter(AdapterManager.java:298)
+	at org.eclipse.core.runtime.PlatformObject.getAdapter(PlatformObject.java:72)
+	at org.sonarlint.eclipse.core.internal.adapter.Adapters.adapt(Adapters.java:69)
+	at org.sonarlint.eclipse.core.internal.adapter.Adapters.adapt(Adapters.java:118)
+	at org.sonarlint.eclipse.ui.internal.SonarLintPostBuildListener.visitDelta(SonarLintPostBuildListener.java:131)
+	at org.sonarlint.eclipse.ui.internal.SonarLintPostBuildListener.lambda$0(SonarLintPostBuildListener.java:60)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.sonarlint.eclipse.ui.internal.SonarLintPostBuildListener.resourceChanged(SonarLintPostBuildListener.java:60)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:365)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:157)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-12-12 17:05:01.000
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2021-12-12 17:05:10.417 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=1.8.0_311
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY com.sun.xml.bind.jaxb-osgi 4 0 2021-12-12 17:05:11.758
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.sun.xml.bind.jaxb-osgi [812]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation; version="2.3.0"
+    -> Export-Package: javax.xml.bind.annotation; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind,javax.xml.parsers,javax.xml.transform,javax.xml.transform.dom,org.w3c.dom"
+       jaxb-api [815]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=9.0))"
+  Unresolved requirement: Import-Package: javax.xml.bind; version="2.3.0"
+    -> Export-Package: javax.xml.bind; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.namespace,javax.xml.stream,javax.xml.transform,javax.xml.validation,org.w3c.dom,org.xml.sax"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-12-12 17:05:15.270
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.core 1 0 2021-12-12 17:05:16.903
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2021-12-12 17:05:17.987
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-12 17:05:17.987
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53945f9c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53b83897,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 17:05:25.852
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\pinhe'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2021-12-12 17:05:39.253
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-12-12 19:46:09.831 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=1.8.0_311
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY com.sun.xml.bind.jaxb-osgi 4 0 2021-12-12 19:46:11.583
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.sun.xml.bind.jaxb-osgi [812]
+  Unresolved requirement: Import-Package: javax.xml.bind; version="2.3.0"
+    -> Export-Package: javax.xml.bind; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.namespace,javax.xml.stream,javax.xml.transform,javax.xml.validation,org.w3c.dom,org.xml.sax"
+       jaxb-api [815]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=9.0))"
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation; version="2.3.0"
+    -> Export-Package: javax.xml.bind.annotation; bundle-symbolic-name="jaxb-api"; bundle-version="2.4.0.b1808300359"; version="2.3.0"; uses:="javax.xml.bind,javax.xml.parsers,javax.xml.transform,javax.xml.transform.dom,org.w3c.dom"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2021-12-12 19:46:28.390
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2021-12-12 19:46:29.592
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-12-12 19:46:29.592
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e1bfe66,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c399d4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-12-12 19:46:39.502
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\pinhe'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:00.172
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:00.177
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@484a91f5[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=624)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:00.180
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:00.226
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.175
+!MESSAGE Boot LS startup time from start to initialized: 2978ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.210
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GqdTMnDOisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.211
+!MESSAGE subscribing to classpath changes: sts4.classpath.GqdTMnDO isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.214
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.217
+!MESSAGE subsribers = {sts4.classpath.GqdTMnDO=Send Classpath Notifications(160)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.217
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.220
+!MESSAGE project football-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.220
+!MESSAGE project api-gateway ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.221
+!MESSAGE Preparing classpath changed notification football-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.221
+!MESSAGE project eureka-server ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.221
+!MESSAGE project config-server ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.222
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.222
+!MESSAGE project image-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.222
+!MESSAGE project report-service ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.223
+!MESSAGE project sports-results-config-server ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.223
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.224
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GqdTMnDO => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.231
+!MESSAGE classpath=175 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.237
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO football-service false 175
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.238
+!MESSAGE Preparing classpath changed notification api-gateway
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.238
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.244
+!MESSAGE classpath=156 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.250
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO api-gateway false 156
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.250
+!MESSAGE Preparing classpath changed notification eureka-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.250
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.256
+!MESSAGE classpath=148 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.261
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO eureka-server false 148
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.261
+!MESSAGE Preparing classpath changed notification config-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.262
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.266
+!MESSAGE classpath=111 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.270
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO config-server false 111
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.270
+!MESSAGE Preparing classpath changed notification image-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.271
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.277
+!MESSAGE classpath=170 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.283
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO image-service false 170
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.283
+!MESSAGE Preparing classpath changed notification report-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.284
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.eclipse.jface 2 0 2021-12-12 19:47:03.290
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:515)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1971)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(Unknown Source)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
+	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.291
+!MESSAGE classpath=157 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.297
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO report-service false 157
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.298
+!MESSAGE Preparing classpath changed notification sports-results-config-server
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.299
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.300
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.300
+!MESSAGE buffering callback sts4.classpath.GqdTMnDO sports-results-config-server false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.301
+!MESSAGE executing callback sts4.classpath.GqdTMnDO 7 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:03.737
+!MESSAGE executing callback sts4.classpath.GqdTMnDO SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-12-12 19:47:06.573
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:50.482
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GqdTMnDO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:50.483
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.GqdTMnDO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:50.483
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-12-12 19:47:50.484
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GqdTMnDO => OK

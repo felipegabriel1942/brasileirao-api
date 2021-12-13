@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\config-server"/>
 			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\image-service"/>
 			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\api-gateway"/>
 			<item value="C:\Users\pinhe\Documents\workplace_courses\spring\sports-result-api\sports-results-config-server\sports-results-config-server"/>
