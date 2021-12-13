@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("football-service")
+@RequestMapping(value = "v1")
 @AllArgsConstructor
 public class ClassificationController {
 	

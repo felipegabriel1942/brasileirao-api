@@ -1,14 +1,5 @@
-server:
- port: 8000
-eureka:
- client:
-  service-url:
-   defaultZone: http://localhost:8761/eureka
 spring:
- application:
-  name: football-service
- datasource:
-  url: jdbc:postgresql://localhost:5432/football_db?autoReconnect=true&useSSL=false
-  username: postgres
-  password: marisfelipe1805
-  driver-class-name: org.postgresql.Driver
+  application:
+    name: classification-service
+  config:
+    import: optional:configserver:http://localhost:8071

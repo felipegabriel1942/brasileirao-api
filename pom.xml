@@ -22,6 +22,8 @@
 
   <modules>
     <module>config-server</module>
+    <module>eureka-server</module>
+    <module>gateway-server</module>
     <module>image-service</module>
     <module>classification-service</module>
   </modules>
