@@ -20,7 +20,7 @@ import com.felipegabriel.classificationservice.api.dto.ClassificationDTO;
 import com.felipegabriel.classificationservice.api.exception.SeasonNotFoundException;
 import com.felipegabriel.classificationservice.api.model.entity.Match;
 import com.felipegabriel.classificationservice.api.model.repository.MatchRepository;
-import com.felipegabriel.classificationservice.api.proxy.ImageProxy;
+import com.felipegabriel.classificationservice.api.client.ImageClient;
 import com.felipegabriel.classificationservice.api.service.ClassificationService;
 
 
@@ -33,11 +33,11 @@ public class ClassificationServiceTest {
 	private MatchRepository matchRepository;
 	
 	@MockBean
-	private ImageProxy imageProxy;
+	private ImageClient imageClient;
 		
 	@BeforeEach
 	public void setUp() {
-		this.classificationService = new ClassificationService(matchRepository, imageProxy);
+		this.classificationService = new ClassificationService(matchRepository, imageClient);
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -67,7 +67,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -88,7 +88,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -109,7 +109,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -130,7 +130,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -151,7 +151,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -172,7 +172,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -193,7 +193,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService
@@ -214,7 +214,7 @@ public class ClassificationServiceTest {
 			.thenReturn(matches);
 		
 		Mockito
-			.when(imageProxy.findImage(Mockito.anyString()))
+			.when(imageClient.findImage(Mockito.anyString()))
 		    .thenReturn(new ResponseEntity<String>("", HttpStatus.OK));
 		
 		List<ClassificationDTO> classification = classificationService

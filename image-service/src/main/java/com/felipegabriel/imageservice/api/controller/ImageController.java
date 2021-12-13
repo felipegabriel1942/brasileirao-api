@@ -14,7 +14,7 @@ import com.felipegabriel.imageservice.api.service.ImageService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("image-service")
+@RequestMapping("v1")
 @AllArgsConstructor
 public class ImageController {
 	

@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import com.felipegabriel.classificationservice.api.dto.ClassificationDTO;
 import com.felipegabriel.classificationservice.api.dto.MatchDTO;
-import com.felipegabriel.classificationservice.api.proxy.ImageProxy;
+import com.felipegabriel.classificationservice.api.client.ImageClient;
 import com.felipegabriel.classificationservice.api.service.ClassificationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ public class ClassificationController {
 	
 	private final ClassificationService service;
 	
-	private final ImageProxy imageProxy;
+	private final ImageClient imageClient;
 	
 	private final ModelMapper modelMapper;
 	
@@ -44,8 +44,8 @@ public class ClassificationController {
 		
 		matches
 			.forEach(m -> {
-				m.setVisitorTeamCrest(imageProxy.findImage(m.getVisitorTeam()).getBody());
-				m.setHomeTeamCrest(imageProxy.findImage(m.getHomeTeam()).getBody());
+				m.setVisitorTeamCrest(imageClient.findImage(m.getVisitorTeam()).getBody());
+				m.setHomeTeamCrest(imageClient.findImage(m.getHomeTeam()).getBody());
 		});
 		
 		return new ResponseEntity<>(matches, HttpStatus.OK);

@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import com.felipegabriel.classificationservice.api.dto.ClassificationDTO;
 import com.felipegabriel.classificationservice.api.model.entity.Match;
 import com.felipegabriel.classificationservice.api.model.repository.MatchRepository;
-import com.felipegabriel.classificationservice.api.proxy.ImageProxy;
+import com.felipegabriel.classificationservice.api.client.ImageClient;
 import org.springframework.stereotype.Service;
 
 import com.felipegabriel.classificationservice.api.exception.SeasonNotFoundException;
@@ -19,7 +19,7 @@ public class ClassificationService {
 	
 	private MatchRepository matchRepository;
 	
-	private final ImageProxy imageProxy;
+	private final ImageClient imageClient;
 	
 	public List<Match> findMatchesBySeasonAndRound(int season, int round) {
 		return matchRepository.findBySeasonAndRound(season, round).stream()
@@ -61,7 +61,7 @@ public class ClassificationService {
 	}
 	
 	private ClassificationDTO setTeamCrest(ClassificationDTO classification) {
-		classification.setTeamCrest(imageProxy.findImage(classification.getTeam()).getBody());
+		classification.setTeamCrest(imageClient.findImage(classification.getTeam()).getBody());
 		return classification;
 	}
 	
