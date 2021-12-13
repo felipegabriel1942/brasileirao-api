@@ -26,6 +26,7 @@
     <module>gateway-server</module>
     <module>image-service</module>
     <module>classification-service</module>
+    <module>match-service</module>
   </modules>
 
   <build>
