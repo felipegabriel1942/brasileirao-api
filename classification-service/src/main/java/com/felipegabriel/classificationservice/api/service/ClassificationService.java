@@ -23,7 +23,7 @@ public class ClassificationService {
 
 	// TODO: IMPLEMENTAR CIRCUIT BREAKER
 	public List<ClassificationDTO> findClassificationBySeason(int season) {
-		List<MatchDTO> matches = matchClient.findMatchesBySeason(season).getBody();
+		List<MatchDTO> matches = matchClient.findMatchesBySeason(season);
 		
 		if (matches == null || matches.isEmpty()) throw new SeasonNotFoundException("Season not found!");
 		

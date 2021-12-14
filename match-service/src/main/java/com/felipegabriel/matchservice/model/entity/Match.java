@@ -32,12 +32,6 @@ public class Match {
     @Column(name = "match_day")
     private String day;
 
-    @Column(name = "home_team")
-    private String homeTeam;
-
-    @Column(name = "visitor_team")
-    private String visitorTeam;
-
     private String stadium;
 
     @Column(name = "home_team_goals")
@@ -45,6 +39,14 @@ public class Match {
 
     @Column(name = "visitor_team_goals")
     private Integer visitorTeamGoals;
+
+    @JoinColumn(name = "fk_home_team")
+    @ManyToOne
+    private Team homeTeam;
+
+    @JoinColumn(name = "fk_visitor_team")
+    @ManyToOne
+    private Team visitorTeam;
 
 }
 

@@ -18,17 +18,13 @@ public class MatchDTO {
 
     private String day;
 
-    private String homeTeam;
+    private TeamDTO homeTeam;
 
-    private String visitorTeam;
+    private TeamDTO visitorTeam;
 
     private String stadium;
 
     private Integer homeTeamGoals;
 
     private Integer visitorTeamGoals;
-
-    private String homeTeamCrest;
-
-    private String visitorTeamCrest;
 }
