@@ -11,24 +11,20 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 public class MatchDTO {
-	
+
 	private LocalDate date;
-	
+
 	private LocalTime time;
-	
+
 	private String day;
-	
-	private String homeTeam;
-	
-	private String visitorTeam;
-	
+
+	private TeamDTO homeTeam;
+
+	private TeamDTO visitorTeam;
+
 	private String stadium;
-	
+
 	private Integer homeTeamGoals;
-	
+
 	private Integer visitorTeamGoals;
-	
-	private String homeTeamCrest;
-	
-	private String visitorTeamCrest;
 }

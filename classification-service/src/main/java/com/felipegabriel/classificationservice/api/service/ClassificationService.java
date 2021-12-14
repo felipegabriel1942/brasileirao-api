@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 import com.felipegabriel.classificationservice.api.client.MatchClient;
 import com.felipegabriel.classificationservice.api.dto.ClassificationDTO;
-import com.felipegabriel.classificationservice.api.client.ImageClient;
 import com.felipegabriel.classificationservice.api.dto.MatchDTO;
+import com.felipegabriel.classificationservice.api.dto.TeamDTO;
 import org.springframework.stereotype.Service;
 
 import com.felipegabriel.classificationservice.api.exception.SeasonNotFoundException;
@@ -16,8 +16,6 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 public class ClassificationService {
-
-	private final ImageClient imageClient;
 
 	private final MatchClient matchClient;
 
@@ -31,7 +29,6 @@ public class ClassificationService {
 			.map(MatchDTO::getHomeTeam)
 			.distinct()
 			.map(this::createClassificationObject)
-			.map(this::setTeamCrest)
 			.map(c -> setPoints(c, matches))
 			.map(c -> setGoalsFor(c, matches))
 			.map(c -> setGoalsAgainst(c, matches))
@@ -46,14 +43,8 @@ public class ClassificationService {
 			.collect(Collectors.toList());
 	}
 
-	// TODO: IMPLEMENTAR CIRCUIT BREAKER
-	private ClassificationDTO setTeamCrest(ClassificationDTO classification) {
-		classification.setTeamCrest(imageClient.findImage(classification.getTeam()).getBody());
-		return classification;
-	}
-	
-	private ClassificationDTO createClassificationObject(String teamName) {
-		return ClassificationDTO.builder().team(teamName).build();
+	private ClassificationDTO createClassificationObject(TeamDTO team) {
+		return ClassificationDTO.builder().team(team).build();
 	}
 	
 	private ClassificationDTO setPoints(ClassificationDTO classification, List<MatchDTO> matches) {

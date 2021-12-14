@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClassificationDTO {
-	private String team;
+
+	private TeamDTO team;
 	private int victories;
 	private int ties;
 	private int defeats;
@@ -19,6 +20,5 @@ public class ClassificationDTO {
 	private int goalsAgainst;
 	private int goalsDifference;
 	private int totalMatches;
-	private String teamCrest;
-	
+
 }
