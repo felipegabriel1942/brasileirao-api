@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Builder
@@ -25,12 +26,7 @@ public class Match {
 
     private Integer round;
 
-    private LocalDate date;
-
-    private LocalTime time;
-
-    @Column(name = "match_day")
-    private String day;
+    private LocalDateTime date;
 
     private String stadium;
 
@@ -40,13 +36,22 @@ public class Match {
     @Column(name = "visitor_team_goals")
     private Integer visitorTeamGoals;
 
-    @JoinColumn(name = "fk_home_team")
-    @ManyToOne
-    private Team homeTeam;
+    @Column(name = "home_team")
+    private String homeTeam;
 
-    @JoinColumn(name = "fk_visitor_team")
-    @ManyToOne
-    private Team visitorTeam;
+    @Column(name = "visitor_team")
+    private String visitorTeam;
+
+    @Column(name = "visitor_team_crest")
+    private String visitorTeamCrest;
+
+    @Column(name = "home_team_crest")
+    private String homeTeamCrest;
+
+    @Column(name = "match_number")
+    private Integer matchNumber;
+
+    private String division;
 
 }
 

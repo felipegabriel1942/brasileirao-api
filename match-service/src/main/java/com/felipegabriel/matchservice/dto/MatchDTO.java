@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Setter
 @Getter
@@ -13,10 +12,6 @@ import java.time.LocalTime;
 public class MatchDTO {
 
     private LocalDate date;
-
-    private LocalTime time;
-
-    private String day;
 
     private TeamDTO homeTeam;
 
