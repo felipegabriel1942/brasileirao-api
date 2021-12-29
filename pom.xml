@@ -27,6 +27,7 @@
     <module>image-service</module>
     <module>classification-service</module>
     <module>match-service</module>
+    <module>scrape-service</module>
   </modules>
 
   <build>

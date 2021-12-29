@@ -1,0 +1,16 @@
+server:
+  port: 8083
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistryWithEureka: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka
+
+scrapeRequest:
+  userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+  baseUrl: https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-
+  delayBeforeRequest: 2500

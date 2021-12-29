@@ -31,4 +31,12 @@ public class MatchController {
 		return new ResponseEntity<>(service.findMatchesBySeasonAndRound(season, round, division), HttpStatus.OK);
 	}
 
+	@PostMapping
+	public void createMatches(
+			@RequestParam Integer season,
+			@RequestParam String division
+	) {
+		service.createMatches(season, division);
+	}
+
 }

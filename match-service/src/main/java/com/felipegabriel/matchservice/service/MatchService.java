@@ -1,10 +1,10 @@
 package com.felipegabriel.matchservice.service;
 
-import com.felipegabriel.matchservice.client.ImageClient;
 import com.felipegabriel.matchservice.dto.MatchDTO;
 import com.felipegabriel.matchservice.model.entity.Match;
 import com.felipegabriel.matchservice.model.repository.MatchRepository;
 import lombok.AllArgsConstructor;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -40,4 +40,9 @@ public class MatchService {
 	private int orderByDate(Match m1, Match m2) {
 		return m1.getDate().compareTo(m2.getDate());
 	}
+
+	public void createMatches(Integer season, String division) {
+//		matchRepository.saveAll(generateMatches(season, division));
+	}
+
 }
