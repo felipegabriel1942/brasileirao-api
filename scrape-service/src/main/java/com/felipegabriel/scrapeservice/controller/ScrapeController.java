@@ -26,4 +26,12 @@ public class ScrapeController {
         return new ResponseEntity<>(service.findMatches(season, division), HttpStatus.OK);
     }
 
+    @GetMapping("/find-matches-by-match-numbers")
+    public ResponseEntity<List<MatchDTO>> findMatchesByMatchNumbers(
+            @RequestParam int season,
+            @RequestParam String division,
+            @RequestParam List<Integer> matchNumbers) {
+        return new ResponseEntity<>(service.findMatchesByMatchNumbers(season, matchNumbers, division), HttpStatus.OK);
+    }
+
 }

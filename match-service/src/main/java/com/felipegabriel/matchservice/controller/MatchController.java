@@ -32,11 +32,11 @@ public class MatchController {
 	}
 
 	@PostMapping
-	public void createMatches(
+	public void saveMatches(
 			@RequestParam Integer season,
 			@RequestParam String division
 	) {
-		service.createMatches(season, division);
+		service.saveMatches(season, division);
 	}
 
 }

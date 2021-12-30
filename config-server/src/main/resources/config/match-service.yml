@@ -10,6 +10,13 @@ eureka:
     service-url:
       defaultZone: http://localhost:8070/eureka
 
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/football_db?autoReconnect=true&useSSL=false

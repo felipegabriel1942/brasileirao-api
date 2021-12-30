@@ -25,9 +25,12 @@ public class ScrapeService {
     @Value("${scrapeRequest.delayBeforeRequest}")
     public Integer delayBeforeRequest;
 
+    @Value("${brasileirao.totalMatchesPerSeason}")
+    public Integer totalMatchesPerSeason;
+
     public List<MatchDTO> findMatches(Integer season, String division) {
         return IntStream
-                .range(1, 30)
+                .range(1, totalMatchesPerSeason)
                 .mapToObj(matchNumber -> scrapeMatchHtmlPage(season, matchNumber, division))
                 .map(this::convertDocumentToMatchDTO)
                 .collect(Collectors.toList());
@@ -40,7 +43,7 @@ public class ScrapeService {
                 .collect(Collectors.toList());
     }
 
-    // TODO: THIS METHOD IS A MESS
+    // TODO: IMPLEMENT ERROR TREATMENT WHEN HTML PAGE NOT FOUND.
     private Document scrapeMatchHtmlPage(int season, int matchNumber, String division) {
         Document htmlPage = null;
 
@@ -68,6 +71,7 @@ public class ScrapeService {
                 .matchNumber(ScrapUtils.extractMatchNumber(htmlPage))
                 .division(ScrapUtils.extractDivision(htmlPage))
                 .visitorTeamCrest(ScrapUtils.extractVisitorTeamCrest(htmlPage))
+                .season(2021)
                 .homeTeamCrest(ScrapUtils.extractHomeTeamCrest(htmlPage)).build();
     }
 }

@@ -4,22 +4,34 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
 @NoArgsConstructor
 public class MatchDTO {
 
-    private LocalDate date;
+    private Integer season;
 
-    private TeamDTO homeTeam;
+    private Integer round;
 
-    private TeamDTO visitorTeam;
+    private LocalDateTime date;
 
     private String stadium;
 
     private Integer homeTeamGoals;
 
     private Integer visitorTeamGoals;
+
+    private String homeTeam;
+
+    private String visitorTeam;
+
+    private String visitorTeamCrest;
+
+    private String homeTeamCrest;
+
+    private Integer matchNumber;
+
+    private String division;
 }
