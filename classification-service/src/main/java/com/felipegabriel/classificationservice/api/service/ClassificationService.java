@@ -20,15 +20,12 @@ public class ClassificationService {
 	private final MatchClient matchClient;
 
 	// TODO: IMPLEMENTAR CIRCUIT BREAKER
-	public List<ClassificationDTO> findClassificationBySeason(int season) {
-		List<MatchDTO> matches = matchClient.findMatchesBySeason(season);
-		
-		if (matches == null || matches.isEmpty()) throw new SeasonNotFoundException("Season not found!");
-		
+	public List<ClassificationDTO> findClassificationBySeason(int season, String division) {
+		List<MatchDTO> matches = matchClient.findMatchesBySeason(season, division);
+
 		return matches.stream()
-			.map(MatchDTO::getHomeTeam)
 			.distinct()
-			.map(this::createClassificationObject)
+			.map(this::convertToClassificationDTO)
 			.map(c -> setPoints(c, matches))
 			.map(c -> setGoalsFor(c, matches))
 			.map(c -> setGoalsAgainst(c, matches))
@@ -43,8 +40,10 @@ public class ClassificationService {
 			.collect(Collectors.toList());
 	}
 
-	private ClassificationDTO createClassificationObject(TeamDTO team) {
-		return ClassificationDTO.builder().team(team).build();
+	private ClassificationDTO convertToClassificationDTO(MatchDTO matchDTO) {
+		return ClassificationDTO.builder()
+				.team(matchDTO.getHomeTeam())
+				.teamCrest(matchDTO.getHomeTeamCrest()).build();
 	}
 	
 	private ClassificationDTO setPoints(ClassificationDTO classification, List<MatchDTO> matches) {

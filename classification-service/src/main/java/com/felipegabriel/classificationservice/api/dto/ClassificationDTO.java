@@ -1,17 +1,16 @@
 package com.felipegabriel.classificationservice.api.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClassificationDTO {
 
-	private TeamDTO team;
+	private String team;
+	private String teamCrest;
 	private int victories;
 	private int ties;
 	private int defeats;

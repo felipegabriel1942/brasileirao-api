@@ -13,7 +13,7 @@ eureka:
 scrapeRequest:
   userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
   baseUrl: https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-
-  delayBeforeRequest: 2500
+  delayBeforeRequest: 3000
 
 brasileirao:
-  totalMatchesPerSeason: 30
+  totalMatchesPerSeason: 380

@@ -11,5 +11,7 @@ import java.util.List;
 public interface MatchClient {
 
     @GetMapping("/matches-by-season")
-    List<MatchDTO> findMatchesBySeason(@RequestParam int season);
+    List<MatchDTO> findMatchesBySeason(
+            @RequestParam int season,
+            @RequestParam String division);
 }

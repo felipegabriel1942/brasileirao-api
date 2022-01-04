@@ -22,7 +22,9 @@ public class ClassificationController {
 	private final ClassificationService service;
 
 	@GetMapping("/classification-by-season")
-	public ResponseEntity<List<ClassificationDTO>> findClassificationBySeason(@RequestParam int season) {
-		return new ResponseEntity<>(service.findClassificationBySeason(season), HttpStatus.OK);
+	public ResponseEntity<List<ClassificationDTO>> findClassificationBySeason(
+			@RequestParam int season,
+			@RequestParam String division) {
+		return new ResponseEntity<>(service.findClassificationBySeason(season, division), HttpStatus.OK);
 	}
 }

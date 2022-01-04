@@ -22,7 +22,7 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer season;
+    private int season;
 
     private Integer round;
 

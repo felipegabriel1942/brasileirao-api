@@ -3,8 +3,11 @@ package com.felipegabriel.scrapeservice.service;
 import com.felipegabriel.scrapeservice.dto.MatchDTO;
 import com.felipegabriel.scrapeservice.utils.*;
 
+import lombok.extern.log4j.Log4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -28,9 +31,11 @@ public class ScrapeService {
     @Value("${brasileirao.totalMatchesPerSeason}")
     public Integer totalMatchesPerSeason;
 
+    private static final Logger log = LoggerFactory.getLogger(ScrapeService.class);
+
     public List<MatchDTO> findMatches(Integer season, String division) {
         return IntStream
-                .range(1, totalMatchesPerSeason)
+                .range(1, totalMatchesPerSeason + 1)
                 .mapToObj(matchNumber -> scrapeMatchHtmlPage(season, matchNumber, division))
                 .map(this::convertDocumentToMatchDTO)
                 .collect(Collectors.toList());
@@ -59,7 +64,7 @@ public class ScrapeService {
     }
 
     private MatchDTO convertDocumentToMatchDTO(Document htmlPage) {
-        return MatchDTO
+        MatchDTO matchDTO = MatchDTO
                 .builder()
                 .stadium(ScrapUtils.extractStadium(htmlPage))
                 .date(ScrapUtils.extractDate(htmlPage))
@@ -71,7 +76,11 @@ public class ScrapeService {
                 .matchNumber(ScrapUtils.extractMatchNumber(htmlPage))
                 .division(ScrapUtils.extractDivision(htmlPage))
                 .visitorTeamCrest(ScrapUtils.extractVisitorTeamCrest(htmlPage))
-                .season(2021)
+                .season(ScrapUtils.extractSeason(htmlPage))
                 .homeTeamCrest(ScrapUtils.extractHomeTeamCrest(htmlPage)).build();
+
+        log.info("Creating match: {}. ", matchDTO.toString());
+
+        return matchDTO;
     }
 }

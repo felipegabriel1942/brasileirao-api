@@ -74,5 +74,11 @@ public class ScrapUtils {
         Elements teamCrest = page.getElementsByClass("time-escudo");
         return Objects.nonNull(teamCrest) ? teamCrest.get(0).getElementsByTag("img").attr("src") : null;
     }
+
+    public static Integer extractSeason(Document page) {
+        Elements division = page.getElementsByTag("h3");
+        String season = Objects.nonNull(division) ? division.get(0).text().split("-")[2] : null;
+        return Objects.nonNull(season) ? Integer.parseInt(season.trim()) : null;
+    }
 }
 

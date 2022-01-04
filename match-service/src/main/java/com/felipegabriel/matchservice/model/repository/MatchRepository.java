@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MatchRepository extends JpaRepository<Match, Integer>{
 
-    List<Match> findBySeasonAndDivision(Integer season, String division);
+    List<Match> findBySeasonAndDivisionContaining(int season, String division);
 
     List<Match> findBySeasonAndRoundAndDivision(Integer season, Integer round, String division);
 
