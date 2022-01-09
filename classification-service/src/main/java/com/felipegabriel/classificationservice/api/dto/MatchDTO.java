@@ -12,7 +12,6 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"homeTeam"})
 public class MatchDTO {
 
 	private Integer season;

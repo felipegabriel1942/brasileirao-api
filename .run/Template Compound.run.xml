@@ -1,10 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="true" type="CompoundRunConfigurationType">
     <toRun name="EurekaServerApplication" type="Application" />
-    <toRun name="GatewayServerApplication" type="Application" />
-    <toRun name="ImageServiceApplication" type="Application" />
-    <toRun name="ConfigurationServerApplication" type="Application" />
     <toRun name="ClassificationServiceApplication" type="Application" />
+    <toRun name="ConfigurationServerApplication" type="Application" />
+    <toRun name="GatewayServerApplication" type="Application" />
     <method v="2" />
   </configuration>
 </component>

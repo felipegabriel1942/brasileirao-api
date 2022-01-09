@@ -7,6 +7,7 @@ import com.felipegabriel.classificationservice.api.client.MatchClient;
 import com.felipegabriel.classificationservice.api.dto.ClassificationDTO;
 import com.felipegabriel.classificationservice.api.dto.MatchDTO;
 import com.felipegabriel.classificationservice.api.dto.TeamDTO;
+import com.felipegabriel.classificationservice.api.exception.ErrorMessage;
 import org.springframework.stereotype.Service;
 
 import com.felipegabriel.classificationservice.api.exception.SeasonNotFoundException;
@@ -23,6 +24,8 @@ public class ClassificationService {
 	public List<ClassificationDTO> findClassificationBySeason(int season, String division) {
 		List<MatchDTO> matches = matchClient.findMatchesBySeason(season, division);
 
+		validateMatches(matches);
+
 		return matches.stream()
 			.distinct()
 			.map(this::convertToClassificationDTO)
@@ -38,6 +41,12 @@ public class ClassificationService {
 			.sorted(this::orderByVictories)
 			.sorted(this::orderByPoints)
 			.collect(Collectors.toList());
+	}
+
+	private void validateMatches(List<MatchDTO> matches) {
+		if (matches.isEmpty()) {
+			throw new SeasonNotFoundException(ErrorMessage.MSG_ERR_SEASON_NOT_FOUND.getMessage());
+		};
 	}
 
 	private ClassificationDTO convertToClassificationDTO(MatchDTO matchDTO) {
